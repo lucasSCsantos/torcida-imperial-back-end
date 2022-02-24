@@ -19,6 +19,7 @@ const connection = mysql.createPool({
 	user: 'admin',
 	password: password,
 	database: 'bd_told',
+	timeout: 60000
 });
 
 module.exports = connection;
