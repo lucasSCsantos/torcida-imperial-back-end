@@ -11,10 +11,13 @@ console.log({
 	database: 'bd_told',
 })
 
+const host = process.env.HOST;
+const password = process.env.PASSWORD;
+
 const connection = mysql.createPool({
-	host: process.env.HOST,
+	host: host,
 	user: 'admin',
-	password: process.env.PASSWORD,
+	password: password,
 	database: 'bd_told',
 });
 
