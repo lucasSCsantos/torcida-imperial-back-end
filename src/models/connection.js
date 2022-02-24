@@ -4,13 +4,6 @@ require('dotenv').config({
    path: path.resolve(__dirname, '../../.env') 
 });
 
-console.log({
-	host: process.env.HOST,
-	user: 'admin',
-	password: process.env.PASSWORD,
-	database: 'bd_told',
-})
-
 const host = process.env.HOST;
 const password = process.env.PASSWORD;
 
@@ -19,7 +12,6 @@ const connection = mysql.createPool({
 	user: 'admin',
 	password: password,
 	database: 'bd_told',
-	timeout: 60000
 });
 
 module.exports = connection;
