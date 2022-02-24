@@ -5,18 +5,17 @@ require('dotenv').config({
 });
 
 console.log({
+	host: process.env.HOST,
 	user: 'admin',
 	password: process.env.PASSWORD,
-	host: process.env.HOST,
 	database: 'bd_told',
 })
 
 const connection = mysql.createPool({
+	host: process.env.HOST,
 	user: 'admin',
 	password: process.env.PASSWORD,
-	host: process.env.HOST,
 	database: 'bd_told',
-	port: '3306'
 });
 
 module.exports = connection;
